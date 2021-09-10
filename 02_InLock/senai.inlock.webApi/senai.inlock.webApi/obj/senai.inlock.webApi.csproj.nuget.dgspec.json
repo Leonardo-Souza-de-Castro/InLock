@@ -48,6 +48,10 @@
               "target": "Package",
               "version": "[6.2.1, )"
             },
+            "System.Data.SqlClient": {
+              "target": "Package",
+              "version": "[4.8.2, )"
+            },
             "System.IdentityModel.Tokens.Jwt": {
               "target": "Package",
               "version": "[6.12.2, )"
