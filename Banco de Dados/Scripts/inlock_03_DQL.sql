@@ -12,7 +12,7 @@ SELECT * FROM Estudios;
 SELECT * FROM Jogos;
 
 --Listar todos os jogos e seus respectivos estúdios;
-SELECT NomeEstudio, NomeJogo, Descrição,  FORMAT (DataLancamento, 'dd/MM/yyyy')DataLancamento, ValorJogo
+SELECT NomeEstudio, NomeJogo, Descricao,  FORMAT (DataLancamento, 'dd/MM/yyyy')DataLancamento, ValorJogo
 FROM Jogos
 INNER JOIN Estudios
 ON Jogos.IdEstudio = Estudios.IdEstudio
@@ -21,7 +21,7 @@ GO
 
 --Buscar e trazer na lista todos os estúdios com os respectivos jogos. Obs.: Listar
 --todos os estúdios mesmo que eles não contenham nenhum jogo de referência;
-SELECT NomeEstudio, NomeJogo, Descrição, FORMAT (DataLancamento, 'dd/MM/yyyy')DataLancamento, ValorJogo
+SELECT NomeEstudio, NomeJogo, Descricao, FORMAT (DataLancamento, 'dd/MM/yyyy')DataLancamento, ValorJogo
 FROM Estudios
 LEFT JOIN Jogos
 ON Estudios.IdEstudio = Jogos.IdEstudio
@@ -39,3 +39,11 @@ GO
 --Buscar um estúdio por idEstudio;
 SELECT * FROM Estudios WHERE IdEstudio = 3;
 GO
+
+
+--Teste do código listar todos
+Select NomeEstudio As [Nome do Estudio], IdJogo As [Id Jogo], NomeJogo As [Nome], Descricao As 'Descrição', DataLancamento As [Data de Lançamento], ValorJogo As Valor
+From Jogos As J 
+Inner Join Estudios As E 
+on J.IdEstudio = E.IdEstudio;
+go

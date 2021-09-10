@@ -15,7 +15,7 @@ SELECT * FROM Estudios
 
 --Inserir um jogo com o nome de: Red Dead Redemption II, com a descrição de: jogo eletrônico de ação-aventura western. Seu estúdio será a Rockstar Studios. 
 -- Lançado mundialmente em 26 de outubro de 2018. E o jogo custa R$ 120,00;
-INSERT INTO Jogos(IdEstudio, NomeJogo, Descrição, DataLancamento, ValorJogo)
+INSERT INTO Jogos(IdEstudio, NomeJogo, Descricao, DataLancamento, ValorJogo)
 VALUES (1,'Diablo 3','É um jogo que contém bastante ação e é viciante, seja você um novato ou um fã.',
         '15/05/2012', '99'), 
 
