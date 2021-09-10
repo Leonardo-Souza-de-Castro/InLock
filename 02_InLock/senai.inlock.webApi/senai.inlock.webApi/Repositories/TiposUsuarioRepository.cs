@@ -28,6 +28,37 @@ namespace senai.inlock.webApi.Repositories
             }
         }
 
+        public TiposUsuarioDomain BuscarporId(int Id)
+        {
+            using (SqlConnection con = new SqlConnection(stringConexao))
+            {
+                string querySelectbyId = "Select Titulo From TiposUsuario as TU where TU.IdTipo = @id";
+
+                con.Open();
+
+                SqlDataReader rdr;
+
+                using (SqlCommand cmd = new SqlCommand(querySelectbyId, con))
+                {
+                    cmd.Parameters.AddWithValue("@id", Id);
+
+                    rdr = cmd.ExecuteReader();
+
+                    if (rdr.Read())
+                    {
+                        TiposUsuarioDomain TipoUsuariobuscado = new TiposUsuarioDomain()
+                        {
+                            Titulo = rdr[0].ToString()
+                        };
+
+                        return TipoUsuariobuscado;
+                    }
+                    return null;
+
+                }
+            }
+        }
+
         public void Cadastrar(TiposUsuarioDomain TipoNovo)
         {
             using (SqlConnection con = new SqlConnection(stringConexao))

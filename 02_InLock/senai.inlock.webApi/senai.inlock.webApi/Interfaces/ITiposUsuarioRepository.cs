@@ -15,6 +15,13 @@ namespace senai.inlock.webApi.Interfaces
         List<TiposUsuarioDomain> Listar_Todos();
 
         /// <summary>
+        /// Método utilizado para buscar um determinado tipo de usuário pelo seu Id
+        /// </summary>
+        /// <param name="Id">Id a ser buscado</param>
+        /// <returns>Tipo de usuário com aquele Id</returns>
+        TiposUsuarioDomain BuscarporId(int Id);
+
+        /// <summary>
         /// Método utilizado para cadastrar novos Tipos
         /// </summary>
         /// <param name="TipoNovo">Tipo a ser cadastrado</param>

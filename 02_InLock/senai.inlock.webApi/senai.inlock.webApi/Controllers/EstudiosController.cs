@@ -85,6 +85,8 @@ namespace senai.inlock.webApi.Controllers
 
         }
 
+
+        //Deletar
         [HttpDelete]
         [Authorize(Roles = "Administrador")]
         public IActionResult Delete(int Id)
