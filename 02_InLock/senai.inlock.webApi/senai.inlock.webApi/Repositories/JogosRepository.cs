@@ -86,8 +86,6 @@ namespace senai.inlock.webApi.Repositories
 
                     cmd.ExecuteNonQuery();
                 }
-
-
             }
         }
 

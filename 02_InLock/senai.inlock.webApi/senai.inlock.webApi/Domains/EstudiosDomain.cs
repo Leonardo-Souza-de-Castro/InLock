@@ -12,5 +12,6 @@ namespace senai.inlock.webApi.Domains
 
         [Required(ErrorMessage = "O nome do estúdio é obrigatório.")]
         public string NomeEstudio { get; set; }
+        public JogosDomain Jogos { get; set; }
     }
 }
