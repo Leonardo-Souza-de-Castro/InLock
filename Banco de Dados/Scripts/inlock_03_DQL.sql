@@ -21,7 +21,7 @@ GO
 
 --Buscar e trazer na lista todos os estúdios com os respectivos jogos. Obs.: Listar
 --todos os estúdios mesmo que eles não contenham nenhum jogo de referência;
-SELECT NomeEstudio, NomeJogo, Descricao, CONVERT (DataLancamento, 103)[Data de Lancamento], ValorJogo
+SELECT NomeEstudio, NomeJogo, Descricao, CONVERT (VARCHAR(20), DataLancamento, 103)[Data de Lancamento], ValorJogo
 FROM Estudios
 LEFT JOIN Jogos
 ON Estudios.IdEstudio = Jogos.IdEstudio
@@ -54,3 +54,9 @@ From Jogos As J
 Inner Join Estudios As E 
 on J.IdEstudio = E.IdEstudio where J.IdJogo = 1;
 GO
+
+--Testando Listar Todos os Estúdios mesmo os que não possuem jogos cadastrados.
+Select NomeEstudio As [Nome do Estudio], IdJogo As [Id Jogo], NomeJogo As Nome, Descricao As [Descrição], DataLancamento As [Data de Lançamento], ValorJogo As Valor 
+From Estudios As E
+Left Join Jogos As J 
+On E.IdEstudio = J.IdEstudio
