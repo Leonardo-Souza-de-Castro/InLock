@@ -41,3 +41,5 @@ CREATE TABLE Usuarios(
 ALTER TABLE Usuarios 
 ADD CONSTRAINT INT
 DEFAULT 2 FOR IdTipoUsuario;
+
+
