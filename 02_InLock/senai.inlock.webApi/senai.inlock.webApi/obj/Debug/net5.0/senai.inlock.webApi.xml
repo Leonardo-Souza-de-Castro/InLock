@@ -81,7 +81,7 @@
             <param name="Id">Id a ser buscado</param>
             <returns>Tipo de usuário com aquele Id</returns>
         </member>
-        <member name="M:senai.inlock.webApi.Interfaces.ITiposUsuarioRepository.Cadastrar(senai.inlock.webApi.Domains.TiposUsuarioDomain)">
+        <member name="M:senai.inlock.webApi.Interfaces.ITiposUsuarioRepository.Cadastrar(senai.inlock.webApi.Domains.TiposUsuariosDomain)">
             <summary>
             Método utilizado para cadastrar novos Tipos
             </summary>
@@ -93,7 +93,7 @@
             </summary>
             <param name="IdTipo">Id a ser Deletado</param>
         </member>
-        <member name="M:senai.inlock.webApi.Interfaces.ITiposUsuarioRepository.AtualizarIdUrl(senai.inlock.webApi.Domains.TiposUsuarioDomain,System.Int32)">
+        <member name="M:senai.inlock.webApi.Interfaces.ITiposUsuarioRepository.AtualizarIdUrl(senai.inlock.webApi.Domains.TiposUsuariosDomain,System.Int32)">
             <summary>
             Método Utilizado para atualizar as informações de um Tipo
             </summary>

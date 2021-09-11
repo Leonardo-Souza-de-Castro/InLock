@@ -41,3 +41,8 @@ VALUES (1,'admin@admin.com','admin'),
 
 SELECT * FROM Usuarios
 
+--Teste Listar Todos Tiposusuarios
+Select IdTipoUsuario, Titulo From TiposUsuarios
+
+--Teste Listar Por Id Tiposusuarios
+Select Titulo From TiposUsuarios as TU where TU.IdTipoUsuario = 3

@@ -51,7 +51,6 @@ namespace senai.inlock.webApi.Controllers
         }
 
         //Cadastrar
-        //Ver se a escrita ta certa "Administrador"
         [Authorize(Roles = "1")]
         [HttpPost]
         public IActionResult Post(JogosDomain NovoJogo)

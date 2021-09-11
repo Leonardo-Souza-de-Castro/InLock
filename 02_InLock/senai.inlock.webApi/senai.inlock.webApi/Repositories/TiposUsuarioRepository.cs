@@ -15,28 +15,29 @@ namespace senai.inlock.webApi.Repositories
 
         //private string stringConexao = "Data Source=DESKTOP-R3SNJAL\\SQLEXPRESS; initial catalog=Inlock_Games_Manha; user id=sa; pwd=senai@132";
 
-        public void AtualizarIdUrl(TiposUsuarioDomain TipoAtualizado, int IdTipo)
+        public void AtualizarIdUrl(TiposUsuariosDomain TipoAtualizado, int IdTipo)
         {
             using (SqlConnection con = new SqlConnection(stringConexao))
             {
-                string queryUpdate = "Update TiposUsuario Set Titulo = @Titulo";
+                string queryUpdate = "Update TiposUsuarios Set Titulo = @Titulo Where IdTipoUsuario = @Id ";
 
                 con.Open();
 
                 using (SqlCommand cmd = new SqlCommand(queryUpdate, con))
                 {
                     cmd.Parameters.AddWithValue("@Titulo", TipoAtualizado.Titulo);
+                    cmd.Parameters.AddWithValue("@Id", IdTipo);
 
                     cmd.ExecuteNonQuery();
                 }
             }
         }
 
-        public TiposUsuarioDomain BuscarporId(int Id)
+        public TiposUsuariosDomain BuscarporId(int Id)
         {
             using (SqlConnection con = new SqlConnection(stringConexao))
             {
-                string querySelectbyId = "Select Titulo From TiposUsuario as TU where TU.IdTipo = @id";
+                string querySelectbyId = "Select Titulo From TiposUsuarios as TU where TU.IdTipoUsuario = @id";
 
                 con.Open();
 
@@ -50,7 +51,7 @@ namespace senai.inlock.webApi.Repositories
 
                     if (rdr.Read())
                     {
-                        TiposUsuarioDomain TipoUsuariobuscado = new TiposUsuarioDomain()
+                        TiposUsuariosDomain TipoUsuariobuscado = new TiposUsuariosDomain()
                         {
                             Titulo = rdr[0].ToString()
                         };
@@ -63,11 +64,12 @@ namespace senai.inlock.webApi.Repositories
             }
         }
 
-        public void Cadastrar(TiposUsuarioDomain TipoNovo)
+
+        public void Cadastrar(TiposUsuariosDomain TipoNovo)
         {
             using (SqlConnection con = new SqlConnection(stringConexao))
             {
-                string queryInsert = "Insert Into TiposUsuario(Titulo) Values(@Titulo)";
+                string queryInsert = "Insert Into TiposUsuarios (Titulo) Values (@Titulo)";
 
                 con.Open();
 
@@ -84,7 +86,7 @@ namespace senai.inlock.webApi.Repositories
         {
             using (SqlConnection con = new SqlConnection(stringConexao))
             {
-                string queryDelete = "Delete from TiposUsuario wher IdTipo = @Id";
+                string queryDelete = "Delete from TiposUsuarios Where IdTipoUsuario = @Id";
 
                 using (SqlCommand cmd = new SqlCommand(queryDelete, con))
                 {
@@ -97,13 +99,13 @@ namespace senai.inlock.webApi.Repositories
             }
         }
 
-        public List<TiposUsuarioDomain> Listar_Todos()
+        public List<TiposUsuariosDomain> Listar_Todos()
         {
-            List<TiposUsuarioDomain> lista_tipos = new List<TiposUsuarioDomain>();
+            List<TiposUsuariosDomain> lista_tipos = new List<TiposUsuariosDomain>();
 
             using (SqlConnection con = new SqlConnection(stringConexao))
             {
-                string querySelect = "Select * From TiposUsuario";
+                string querySelect = "Select IdTipoUsuario, Titulo From TiposUsuarios";
 
                 con.Open();
 
@@ -115,7 +117,7 @@ namespace senai.inlock.webApi.Repositories
 
                     while (rdr.Read())
                     {
-                        TiposUsuarioDomain tipos = new TiposUsuarioDomain()
+                        TiposUsuariosDomain tipos = new TiposUsuariosDomain()
                         {
                             IdTipoUsuario = Convert.ToInt32(rdr[0]),
                             Titulo = rdr[1].ToString()

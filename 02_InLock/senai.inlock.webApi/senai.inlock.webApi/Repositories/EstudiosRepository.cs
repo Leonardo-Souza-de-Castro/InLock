@@ -19,13 +19,15 @@ namespace senai.inlock.webApi.Repositories
         {
             using (SqlConnection con = new SqlConnection(stringConexao))
             {
-                string queryUpdate = "Update Estudios Set NomeEstudio = @Nome";
+                string queryUpdate = "Update Estudios Set NomeEstudio = @Nome Where IdEstudio = @Id";
 
                 con.Open();
 
                 using (SqlCommand cmd = new SqlCommand(queryUpdate, con))
                 {
                     cmd.Parameters.AddWithValue("@Nome", estudioatualizado.NomeEstudio);
+
+                    cmd.Parameters.AddWithValue("@Id", IdEstudio);
 
                     cmd.ExecuteNonQuery();
                 }

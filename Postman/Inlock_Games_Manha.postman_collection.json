@@ -49,7 +49,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGFkbWluLmNvbSIsImp0aSI6IjEiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiIxIiwiZXhwIjoxNjMxMzM0MTM1LCJpc3MiOiJpbmxvY2sud2ViQXBpIiwiYXVkIjoiaW5sb2NrLndlYkFwaSJ9.fh5uWxos8Lm3lSd8lSJ8XhY3p26ZvJFUxkKMuin8xbg",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGFkbWluLmNvbSIsImp0aSI6IjEiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiIxIiwiZXhwIjoxNjMxMzk0NjY4LCJpc3MiOiJpbmxvY2sud2ViQXBpIiwiYXVkIjoiaW5sb2NrLndlYkFwaSJ9.9jxRrDtHuOO4SuYIV_kiWoA3TXjwhXrTPMHpv8EfavA",
 									"type": "string"
 								}
 							]
@@ -117,7 +117,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGFkbWluLmNvbSIsImp0aSI6IjEiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiIxIiwiZXhwIjoxNjMxMzM5NDA4LCJpc3MiOiJpbmxvY2sud2ViQXBpIiwiYXVkIjoiaW5sb2NrLndlYkFwaSJ9.jiCRHxqDNI6piGs3dl4ukg4Gm2bDKG1bkjzKVuufmg0",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGFkbWluLmNvbSIsImp0aSI6IjEiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiIxIiwiZXhwIjoxNjMxMzk0NjY4LCJpc3MiOiJpbmxvY2sud2ViQXBpIiwiYXVkIjoiaW5sb2NrLndlYkFwaSJ9.9jxRrDtHuOO4SuYIV_kiWoA3TXjwhXrTPMHpv8EfavA",
 									"type": "string"
 								}
 							]
@@ -134,7 +134,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:5000/api/Usuarios/3",
+							"raw": "http://localhost:5000/api/Usuarios/4",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -143,7 +143,7 @@
 							"path": [
 								"api",
 								"Usuarios",
-								"3"
+								"4"
 							]
 						}
 					},
@@ -165,7 +165,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGFkbWluLmNvbSIsImp0aSI6IjEiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiIxIiwiZXhwIjoxNjMxMzMzMDg4LCJpc3MiOiJpbmxvY2sud2ViQXBpIiwiYXVkIjoiaW5sb2NrLndlYkFwaSJ9.qwYN1Aq7x6BA80gu7oPZSz3c1JHqBY7Lb7xg-aUwdcQ",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGFkbWluLmNvbSIsImp0aSI6IjEiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiIxIiwiZXhwIjoxNjMxMzk0NjY4LCJpc3MiOiJpbmxvY2sud2ViQXBpIiwiYXVkIjoiaW5sb2NrLndlYkFwaSJ9.9jxRrDtHuOO4SuYIV_kiWoA3TXjwhXrTPMHpv8EfavA",
 									"type": "string"
 								}
 							]
@@ -199,7 +199,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGFkbWluLmNvbSIsImp0aSI6IjEiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiIxIiwiZXhwIjoxNjMxMzM0MTM1LCJpc3MiOiJpbmxvY2sud2ViQXBpIiwiYXVkIjoiaW5sb2NrLndlYkFwaSJ9.fh5uWxos8Lm3lSd8lSJ8XhY3p26ZvJFUxkKMuin8xbg",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGFkbWluLmNvbSIsImp0aSI6IjEiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiIxIiwiZXhwIjoxNjMxMzk0NjY4LCJpc3MiOiJpbmxvY2sud2ViQXBpIiwiYXVkIjoiaW5sb2NrLndlYkFwaSJ9.9jxRrDtHuOO4SuYIV_kiWoA3TXjwhXrTPMHpv8EfavA",
 									"type": "string"
 								}
 							]
@@ -207,7 +207,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:5000/api/jogos/3",
+							"raw": "http://localhost:5000/api/jogos/1",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -216,7 +216,7 @@
 							"path": [
 								"api",
 								"jogos",
-								"3"
+								"1"
 							]
 						}
 					},
@@ -230,7 +230,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGFkbWluLmNvbSIsImp0aSI6IjEiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiIxIiwiZXhwIjoxNjMxMzQzODM5LCJpc3MiOiJpbmxvY2sud2ViQXBpIiwiYXVkIjoiaW5sb2NrLndlYkFwaSJ9.GkAfeBdMaxQpqVKi7aL2i1gqQonzJtL1jf_0XKPJHIk",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGFkbWluLmNvbSIsImp0aSI6IjEiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiIxIiwiZXhwIjoxNjMxMzk0NjY4LCJpc3MiOiJpbmxvY2sud2ViQXBpIiwiYXVkIjoiaW5sb2NrLndlYkFwaSJ9.9jxRrDtHuOO4SuYIV_kiWoA3TXjwhXrTPMHpv8EfavA",
 									"type": "string"
 								}
 							]
@@ -239,7 +239,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"NomeJogo\" : \"teste\",\r\n    \"Descricao\": \"teste que precisa dar certo\", \r\n    \"DataLancamento\": \"2021-09-10\",\r\n    \"ValorJogo\": 99.80,\r\n    \"Estudio\": {\r\n        \"IdEstudio\" : 1\r\n    } \r\n}",
+							"raw": "{\r\n    \"NomeJogo\" : \"testee\",\r\n    \"Descricao\": \"teste\", \r\n    \"DataLancamento\": \"2021-09-11\",\r\n    \"ValorJogo\": 90.80,\r\n    \"Estudio\": {\r\n        \"IdEstudio\" : 1\r\n    } \r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -269,7 +269,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGFkbWluLmNvbSIsImp0aSI6IjEiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiIxIiwiZXhwIjoxNjMxMzM5NDA4LCJpc3MiOiJpbmxvY2sud2ViQXBpIiwiYXVkIjoiaW5sb2NrLndlYkFwaSJ9.jiCRHxqDNI6piGs3dl4ukg4Gm2bDKG1bkjzKVuufmg0",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGFkbWluLmNvbSIsImp0aSI6IjEiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiIxIiwiZXhwIjoxNjMxMzk0NjY4LCJpc3MiOiJpbmxvY2sud2ViQXBpIiwiYXVkIjoiaW5sb2NrLndlYkFwaSJ9.9jxRrDtHuOO4SuYIV_kiWoA3TXjwhXrTPMHpv8EfavA",
 									"type": "string"
 								}
 							]
@@ -309,7 +309,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGFkbWluLmNvbSIsImp0aSI6IjEiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiIxIiwiZXhwIjoxNjMxMzM0MTM1LCJpc3MiOiJpbmxvY2sud2ViQXBpIiwiYXVkIjoiaW5sb2NrLndlYkFwaSJ9.fh5uWxos8Lm3lSd8lSJ8XhY3p26ZvJFUxkKMuin8xbg",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGFkbWluLmNvbSIsImp0aSI6IjEiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiIxIiwiZXhwIjoxNjMxMzk0NjY4LCJpc3MiOiJpbmxvY2sud2ViQXBpIiwiYXVkIjoiaW5sb2NrLndlYkFwaSJ9.9jxRrDtHuOO4SuYIV_kiWoA3TXjwhXrTPMHpv8EfavA",
 									"type": "string"
 								}
 							]
@@ -318,7 +318,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"NomeJogo\" : \"teste testando\",\r\n    \"Descricao\": \"teste que precisa dar certo, amem\", \r\n    \"DataLancamento\": \"2021-09-10\",\r\n    \"ValorJogo\": 99.80\r\n}",
+							"raw": "{\r\n    \"NomeJogo\" : \"teste testando\",\r\n    \"Descricao\": \"amem\", \r\n    \"DataLancamento\": \"2020-09-10\",\r\n    \"ValorJogo\": 92.80\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -326,7 +326,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:5000/api/jogos/3",
+							"raw": "http://localhost:5000/api/jogos/5",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -335,7 +335,7 @@
 							"path": [
 								"api",
 								"jogos",
-								"3"
+								"5"
 							]
 						}
 					},
@@ -357,7 +357,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGFkbWluLmNvbSIsImp0aSI6IjEiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiIxIiwiZXhwIjoxNjMxMzM5NDA4LCJpc3MiOiJpbmxvY2sud2ViQXBpIiwiYXVkIjoiaW5sb2NrLndlYkFwaSJ9.jiCRHxqDNI6piGs3dl4ukg4Gm2bDKG1bkjzKVuufmg0",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGFkbWluLmNvbSIsImp0aSI6IjEiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiIxIiwiZXhwIjoxNjMxMzk0NjY4LCJpc3MiOiJpbmxvY2sud2ViQXBpIiwiYXVkIjoiaW5sb2NrLndlYkFwaSJ9.9jxRrDtHuOO4SuYIV_kiWoA3TXjwhXrTPMHpv8EfavA",
 									"type": "string"
 								}
 							]
@@ -396,7 +396,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGFkbWluLmNvbSIsImp0aSI6IjEiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiIxIiwiZXhwIjoxNjMxMzQzODM5LCJpc3MiOiJpbmxvY2sud2ViQXBpIiwiYXVkIjoiaW5sb2NrLndlYkFwaSJ9.GkAfeBdMaxQpqVKi7aL2i1gqQonzJtL1jf_0XKPJHIk",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGFkbWluLmNvbSIsImp0aSI6IjEiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiIxIiwiZXhwIjoxNjMxMzk0NjY4LCJpc3MiOiJpbmxvY2sud2ViQXBpIiwiYXVkIjoiaW5sb2NrLndlYkFwaSJ9.9jxRrDtHuOO4SuYIV_kiWoA3TXjwhXrTPMHpv8EfavA",
 									"type": "string"
 								}
 							]
@@ -435,7 +435,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGFkbWluLmNvbSIsImp0aSI6IjEiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiIxIiwiZXhwIjoxNjMxMzQzODM5LCJpc3MiOiJpbmxvY2sud2ViQXBpIiwiYXVkIjoiaW5sb2NrLndlYkFwaSJ9.GkAfeBdMaxQpqVKi7aL2i1gqQonzJtL1jf_0XKPJHIk",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGFkbWluLmNvbSIsImp0aSI6IjEiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiIxIiwiZXhwIjoxNjMxMzk0NjY4LCJpc3MiOiJpbmxvY2sud2ViQXBpIiwiYXVkIjoiaW5sb2NrLndlYkFwaSJ9.9jxRrDtHuOO4SuYIV_kiWoA3TXjwhXrTPMHpv8EfavA",
 									"type": "string"
 								}
 							]
@@ -444,7 +444,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": " {\r\n    \"NomeEstudio\" : \"Estudio Livia\"\r\n } ",
+							"raw": " {\r\n    \"NomeEstudio\" : \"Teste Livia\"\r\n } ",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -452,7 +452,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:5000/api/Estudios/4",
+							"raw": "http://localhost:5000/api/Estudios/5",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -461,7 +461,7 @@
 							"path": [
 								"api",
 								"Estudios",
-								"4"
+								"5"
 							]
 						}
 					},
@@ -475,7 +475,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGFkbWluLmNvbSIsImp0aSI6IjEiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiIxIiwiZXhwIjoxNjMxMzQzODM5LCJpc3MiOiJpbmxvY2sud2ViQXBpIiwiYXVkIjoiaW5sb2NrLndlYkFwaSJ9.GkAfeBdMaxQpqVKi7aL2i1gqQonzJtL1jf_0XKPJHIk",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGFkbWluLmNvbSIsImp0aSI6IjEiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiIxIiwiZXhwIjoxNjMxMzk0NjY4LCJpc3MiOiJpbmxvY2sud2ViQXBpIiwiYXVkIjoiaW5sb2NrLndlYkFwaSJ9.9jxRrDtHuOO4SuYIV_kiWoA3TXjwhXrTPMHpv8EfavA",
 									"type": "string"
 								}
 							]
@@ -483,7 +483,7 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:5000/api/Estudios/4",
+							"raw": "http://localhost:5000/api/Estudios/5",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -492,7 +492,7 @@
 							"path": [
 								"api",
 								"Estudios",
-								"4"
+								"5"
 							]
 						}
 					},
@@ -506,7 +506,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGFkbWluLmNvbSIsImp0aSI6IjEiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiIxIiwiZXhwIjoxNjMxMzQ1NjA0LCJpc3MiOiJpbmxvY2sud2ViQXBpIiwiYXVkIjoiaW5sb2NrLndlYkFwaSJ9.49xRxEq4-bCh1fqEQfLf1Cjh0yS7ptAGeBJCQKKnKbU",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGFkbWluLmNvbSIsImp0aSI6IjEiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiIxIiwiZXhwIjoxNjMxMzk0NjY4LCJpc3MiOiJpbmxvY2sud2ViQXBpIiwiYXVkIjoiaW5sb2NrLndlYkFwaSJ9.9jxRrDtHuOO4SuYIV_kiWoA3TXjwhXrTPMHpv8EfavA",
 									"type": "string"
 								}
 							]
@@ -514,7 +514,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:5000/api/Estudios/3",
+							"raw": "http://localhost:5000/api/Estudios/2",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -523,7 +523,202 @@
 							"path": [
 								"api",
 								"Estudios",
-								"3"
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "TiposUsuarios",
+			"item": [
+				{
+					"name": "TipoUsuario.Cadastrar",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGFkbWluLmNvbSIsImp0aSI6IjEiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiIxIiwiZXhwIjoxNjMxMzk0NjY4LCJpc3MiOiJpbmxvY2sud2ViQXBpIiwiYXVkIjoiaW5sb2NrLndlYkFwaSJ9.9jxRrDtHuOO4SuYIV_kiWoA3TXjwhXrTPMHpv8EfavA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \"Titulo\" : \"Teste\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/TiposUsuarios",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"TiposUsuarios"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TipoUsuario.Atualizar",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGFkbWluLmNvbSIsImp0aSI6IjEiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiIxIiwiZXhwIjoxNjMxMzk0NjY4LCJpc3MiOiJpbmxvY2sud2ViQXBpIiwiYXVkIjoiaW5sb2NrLndlYkFwaSJ9.9jxRrDtHuOO4SuYIV_kiWoA3TXjwhXrTPMHpv8EfavA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Titulo\" : \"Teste 123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/TiposUsuarios/5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"TiposUsuarios",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TipoUsuario.ListarPorId",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGFkbWluLmNvbSIsImp0aSI6IjEiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiIxIiwiZXhwIjoxNjMxMzk0NjY4LCJpc3MiOiJpbmxvY2sud2ViQXBpIiwiYXVkIjoiaW5sb2NrLndlYkFwaSJ9.9jxRrDtHuOO4SuYIV_kiWoA3TXjwhXrTPMHpv8EfavA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/TiposUsuarios/5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"TiposUsuarios",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TipoUsuario.ListarTodos",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGFkbWluLmNvbSIsImp0aSI6IjEiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiIxIiwiZXhwIjoxNjMxMzk0NjY4LCJpc3MiOiJpbmxvY2sud2ViQXBpIiwiYXVkIjoiaW5sb2NrLndlYkFwaSJ9.9jxRrDtHuOO4SuYIV_kiWoA3TXjwhXrTPMHpv8EfavA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/TiposUsuarios",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"TiposUsuarios"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TipoUsuario.Deletar",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGFkbWluLmNvbSIsImp0aSI6IjEiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiIxIiwiZXhwIjoxNjMxMzk0NjY4LCJpc3MiOiJpbmxvY2sud2ViQXBpIiwiYXVkIjoiaW5sb2NrLndlYkFwaSJ9.9jxRrDtHuOO4SuYIV_kiWoA3TXjwhXrTPMHpv8EfavA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/TiposUsuarios/5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"TiposUsuarios",
+								"5"
 							]
 						}
 					},

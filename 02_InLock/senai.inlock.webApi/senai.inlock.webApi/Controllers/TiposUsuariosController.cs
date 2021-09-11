@@ -29,18 +29,18 @@ namespace senai.inlock.webApi.Controllers
 
         //Listar Todos
         [HttpGet]
-        private IActionResult Get()
+        public IActionResult Get()
         {
-            List<TiposUsuarioDomain> ListaTiposUsuarios = _TipoUsuarioRepository.Listar_Todos();
+            List<TiposUsuariosDomain> ListaTiposUsuarios = _TipoUsuarioRepository.Listar_Todos();
 
-            return Ok();
+            return Ok(ListaTiposUsuarios);
         }
 
         ////Listar por Id 
         [HttpGet("{Id}")]
-        private IActionResult GetById(int Id)
+        public IActionResult GetById(int Id)
         {
-            TiposUsuarioDomain TipoUsuarioBuscado = _TipoUsuarioRepository.BuscarporId(Id);
+            TiposUsuariosDomain TipoUsuarioBuscado = _TipoUsuarioRepository.BuscarporId(Id);
 
             if (TipoUsuarioBuscado == null)
             {
@@ -52,7 +52,7 @@ namespace senai.inlock.webApi.Controllers
 
         //Cadastrar
         [HttpPost]
-        private IActionResult Post(TiposUsuarioDomain NovoTipoUsuario)
+        public IActionResult Post(TiposUsuariosDomain NovoTipoUsuario)
         {
             _TipoUsuarioRepository.Cadastrar(NovoTipoUsuario);
 
@@ -61,9 +61,9 @@ namespace senai.inlock.webApi.Controllers
 
         //Atualizar (passando pela Url)
         [HttpPut("{Id}")]
-        public IActionResult PutUrl(int Id, TiposUsuarioDomain TipoAtualizado)
+        public IActionResult PutUrl(int Id, TiposUsuariosDomain TipoAtualizado)
         {
-            TiposUsuarioDomain TipoUsuarioBuscado = _TipoUsuarioRepository.BuscarporId(Id);
+            TiposUsuariosDomain TipoUsuarioBuscado = _TipoUsuarioRepository.BuscarporId(Id);
 
             if (TipoUsuarioBuscado == null)
             {
@@ -84,7 +84,7 @@ namespace senai.inlock.webApi.Controllers
 
 
         //Deletar
-        [HttpDelete]
+        [HttpDelete("{Id}")]
         public IActionResult Delete(int Id)
         {
             _TipoUsuarioRepository.Deletar(Id);

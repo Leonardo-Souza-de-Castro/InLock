@@ -15,6 +15,6 @@ namespace senai.inlock.webApi.Domains
 
         [Required(ErrorMessage = "Informe a senha.")]
         public string Senha { get; set; }
-        public TiposUsuarioDomain IdTipoUsuario { get; set; }
+        public TiposUsuariosDomain IdTipoUsuario { get; set; }
     }
 }

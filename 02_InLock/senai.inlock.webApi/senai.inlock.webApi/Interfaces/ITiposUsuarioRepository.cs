@@ -12,20 +12,20 @@ namespace senai.inlock.webApi.Interfaces
         /// Método utilizado para que sejam listados todos os tipos de usuarios cadastrados
         /// </summary>
         /// <returns>Lista de Tipos</returns>
-        List<TiposUsuarioDomain> Listar_Todos();
+        List<TiposUsuariosDomain> Listar_Todos();
 
         /// <summary>
         /// Método utilizado para buscar um determinado tipo de usuário pelo seu Id
         /// </summary>
         /// <param name="Id">Id a ser buscado</param>
         /// <returns>Tipo de usuário com aquele Id</returns>
-        TiposUsuarioDomain BuscarporId(int Id);
+        TiposUsuariosDomain BuscarporId(int Id);
 
         /// <summary>
         /// Método utilizado para cadastrar novos Tipos
         /// </summary>
         /// <param name="TipoNovo">Tipo a ser cadastrado</param>
-        void Cadastrar(TiposUsuarioDomain TipoNovo);
+        void Cadastrar(TiposUsuariosDomain TipoNovo);
 
         /// <summary>
         /// Método Utilizado para Deletar Tipos
@@ -38,6 +38,6 @@ namespace senai.inlock.webApi.Interfaces
         /// </summary>
         /// <param name="TipoAtualizado">Novos Dados</param>
         /// <param name="IdTipo">Id a ser atualizado</param>
-        void AtualizarIdUrl(TiposUsuarioDomain TipoAtualizado, int IdTipo);
+        void AtualizarIdUrl(TiposUsuariosDomain TipoAtualizado, int IdTipo);
     }
 }

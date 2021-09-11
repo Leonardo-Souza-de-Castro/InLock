@@ -20,7 +20,7 @@ namespace senai.inlock.webApi.Repositories
         {
             using (SqlConnection con = new SqlConnection(stringConexao))
             {
-                string queryUpdate = "Update Jogos Set NomeJogo = @Nome, Descricao = @Descri, DataLancamento = @DL, ValorJogo = @Valor";
+                string queryUpdate = "Update Jogos Set NomeJogo = @Nome, Descricao = @Descri, DataLancamento = @DL, ValorJogo = @Valor where IdJogo = @Id";
 
                 con.Open();
 
@@ -30,6 +30,7 @@ namespace senai.inlock.webApi.Repositories
                     cmd.Parameters.AddWithValue("@Descri", JogoAtualizado.Descricao);
                     cmd.Parameters.AddWithValue("@DL", Convert.ToDateTime(JogoAtualizado.DataLancamento));
                     cmd.Parameters.AddWithValue("@Valor", JogoAtualizado.ValorJogo);
+                    cmd.Parameters.AddWithValue("@Id", IdJogo);
 
                     cmd.ExecuteNonQuery();
                 }

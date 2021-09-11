@@ -59,7 +59,7 @@ namespace senai.inlock.webApi.Repositories
                             IdUsuario = Convert.ToInt32(rdr[0]),
                             Email = rdr[1].ToString(),
                             Senha = rdr[2].ToString(),
-                            IdTipoUsuario = new TiposUsuarioDomain { IdTipoUsuario = Convert.ToInt32(rdr[3])}
+                            IdTipoUsuario = new TiposUsuariosDomain { IdTipoUsuario = Convert.ToInt32(rdr[3])}
                         };
 
                         return usuariobuscado;
@@ -127,7 +127,7 @@ namespace senai.inlock.webApi.Repositories
                         UsuarioDomain usuario = new UsuarioDomain()
                         {
                             Email = rdr[0].ToString(),
-                            IdTipoUsuario = new TiposUsuarioDomain { Titulo = rdr[1].ToString()}
+                            IdTipoUsuario = new TiposUsuariosDomain { Titulo = rdr[1].ToString()}
                         };
 
                         lista_usuarios.Add(usuario);
