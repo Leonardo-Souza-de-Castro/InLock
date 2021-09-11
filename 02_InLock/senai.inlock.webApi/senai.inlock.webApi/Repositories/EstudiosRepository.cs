@@ -10,7 +10,11 @@ namespace senai.inlock.webApi.Repositories
 {
     public class EstudiosRepository : IEstudiosRepository
     {
+<<<<<<< HEAD
         private string stringConexao = "Data Source=DESKTOP-9F56DG6\\SQLEXPRESS; initial catalog=Inlock_Games_Manha; integrated security=true;";
+=======
+        private string stringConexao = "Data Source=DESKTOP-R3SNJAL\\SQLEXPRESS; initial catalog=Inlock_Games_Manha; user id=sa; pwd=senai@132";
+>>>>>>> 2ef5e6c035dcf1b2dcddfa677284a375dd9838fe
         public void AtualizarIdUrl(EstudiosDomain estudioatualizado, int IdEstudio)
         {
             using (SqlConnection con = new SqlConnection(stringConexao))

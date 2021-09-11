@@ -33,10 +33,8 @@ namespace senai.inlock.webApi.Controllers
         {
             UsuarioDomain UsuarioBuscado = _UsuarioRepository.BuscarporEmaileSenha(Login.Email, Login.Senha);
 
-            if (UsuarioBuscado == null)
+            if (UsuarioBuscado != null)
             {
-                return NotFound("Email ou senha inválido");
-            }
 
             var MinhasClaims = new[]
             {
@@ -60,6 +58,10 @@ namespace senai.inlock.webApi.Controllers
             {
                 token = new JwtSecurityTokenHandler().WriteToken(meuToken)
             });
+
+            }
+
+            return NotFound("Email ou senha inválido");
         }
 
         [Authorize(Roles = "1")]
