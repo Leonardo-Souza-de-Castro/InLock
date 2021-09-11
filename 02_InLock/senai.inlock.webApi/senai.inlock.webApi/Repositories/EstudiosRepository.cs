@@ -10,7 +10,7 @@ namespace senai.inlock.webApi.Repositories
 {
     public class EstudiosRepository : IEstudiosRepository
     {
-        private string stringConexao = "Data Source=DESKTOP-R3SNJAL\\SQLEXPRESS; initial catalog=M_Rental; user id=sa; pwd=senai@132";
+        private string stringConexao = "Data Source=DESKTOP-9F56DG6\\SQLEXPRESS; initial catalog=Inlock_Games_Manha; integrated security=true;";
         public void AtualizarIdUrl(EstudiosDomain estudioatualizado, int IdEstudio)
         {
             using (SqlConnection con = new SqlConnection(stringConexao))
@@ -116,7 +116,7 @@ namespace senai.inlock.webApi.Repositories
                         EstudiosDomain Estudio = new EstudiosDomain()
                         {
                             NomeEstudio = rdr[0].ToString(),
-                            Jogos = new JogosDomain { IdJogo = Convert.ToInt32(rdr[1]), NomeJogo = rdr[2].ToString(), Descricao = rdr[3].ToString(), DataLancamento = Convert.ToDateTime(rdr[4]), ValorJogo = Convert.ToInt32(rdr[5])}
+                            Jogos = new JogosDomain { IdJogo = Convert.ToInt32(rdr[1]), NomeJogo = rdr[2].ToString(), Descricao = rdr[3].ToString(), DataLancamento = Convert.ToDateTime(rdr[4]), ValorJogo = Convert.ToDecimal(rdr[5])}
                         };
 
                         Lista_Estudios.Add(Estudio);

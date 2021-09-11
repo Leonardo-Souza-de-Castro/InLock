@@ -10,39 +10,39 @@ namespace senai.inlock.webApi.Repositories
 {
     public class UsuarioRepository : IUsuarioRepository
     {
-        private string stringConexao = "Data Source=DESKTOP-R3SNJAL\\SQLEXPRESS; initial catalog=M_Rental; user id=sa; pwd=senai@132";
+        private string stringConexao = "Data Source=DESKTOP-9F56DG6\\SQLEXPRESS; initial catalog=Inlock_Games_Manha; integrated security=true;";
 
-        public void AtualizarIdUrl(UsuarioDomain UsuarioAtualizado, int IdUsuario)
+        //public void AtualizarIdUrl(UsuarioDomain UsuarioAtualizado, int IdUsuario)
+        //{
+        //    using (SqlConnection con = new SqlConnection(stringConexao))
+        //    {
+        //        string queryUpdate = "Update Usuario Set Email = @Email, Senha = @Senha";
+
+        //        con.Open();
+
+        //        using (SqlCommand cmd = new SqlCommand(queryUpdate, con))
+        //        {
+        //            cmd.Parameters.AddWithValue("@Email", UsuarioAtualizado.Email);
+        //            cmd.Parameters.AddWithValue("@Senha", UsuarioAtualizado.Senha);
+
+        //            cmd.ExecuteNonQuery();
+        //        }
+        //    }
+        //}
+
+        public UsuarioDomain BuscarporEmaileSenha(string Email, string Senha)
         {
             using (SqlConnection con = new SqlConnection(stringConexao))
             {
-                string queryUpdate = "Update Usuario Set email = @email, senha = @senha";
-
-                con.Open();
-
-                using (SqlCommand cmd = new SqlCommand(queryUpdate, con))
-                {
-                    cmd.Parameters.AddWithValue("@email", UsuarioAtualizado.email);
-                    cmd.Parameters.AddWithValue("@senha", UsuarioAtualizado.senha);
-
-                    cmd.ExecuteNonQuery();
-                }
-            }
-        }
-
-        public UsuarioDomain BuscarporEmaileSenha(string email, string senha)
-        {
-            using (SqlConnection con = new SqlConnection(stringConexao))
-            {
-                string queryLogin = @"select  IdUsuario, email, senha, IdTipo
-	                                   from Usuario
-	                                   where email  = @email
-	                                   and senha = @senha";
+                string queryLogin = @"select  IdUsuario, Email, Senha, IdTipoUsuario
+	                                   from Usuarios
+	                                   where Email  = @Email
+	                                   and Senha = @Senha";
 
                 using (SqlCommand cmd = new SqlCommand(queryLogin, con))
                 {
-                    cmd.Parameters.AddWithValue("@email", email);
-                    cmd.Parameters.AddWithValue("@senha", senha);
+                    cmd.Parameters.AddWithValue("@Email", Email);
+                    cmd.Parameters.AddWithValue("@Senha", Senha);
 
                     con.Open();
 
@@ -53,9 +53,9 @@ namespace senai.inlock.webApi.Repositories
                         UsuarioDomain usuariobuscado = new UsuarioDomain()
                         {
                             IdUsuario = Convert.ToInt32(rdr[0]),
-                            email = rdr[1].ToString(),
-                            senha = rdr[2].ToString(),
-                            IdTipo = new TiposUsuarioDomain { IdTipo = Convert.ToInt32(rdr[3])}
+                            Email = rdr[1].ToString(),
+                            Senha = rdr[2].ToString(),
+                            IdTipoUsuario = new TiposUsuarioDomain { IdTipoUsuario = Convert.ToInt32(rdr[3])}
                         };
 
                         return usuariobuscado;
@@ -70,15 +70,15 @@ namespace senai.inlock.webApi.Repositories
         {
             using (SqlConnection con = new SqlConnection(stringConexao))
             {
-                string queryInsert = "Insert Into Jogos(email, senha, idtipo) Values(@email, @senha, @id)";
+                string queryInsert = "Insert Into Usuarios(Email, Senha, IdTipoUsuario) Values(@Email, @Senha, @IdTipoUsuario)";
 
                 con.Open();
 
                 using (SqlCommand cmd = new SqlCommand(queryInsert, con))
                 {
-                    cmd.Parameters.AddWithValue("@email", UsuarioNovo.email);
-                    cmd.Parameters.AddWithValue("@senha", UsuarioNovo.senha);
-                    cmd.Parameters.AddWithValue("@id", UsuarioNovo.IdTipo.IdTipo); //Definir no Banco o Valor padrão para comum (Default = 1)
+                    cmd.Parameters.AddWithValue("@Email", UsuarioNovo.Email);
+                    cmd.Parameters.AddWithValue("@Senha", UsuarioNovo.Senha);
+                    cmd.Parameters.AddWithValue("@IdTipoUsuario", UsuarioNovo.IdTipoUsuario.IdTipoUsuario); //Definir no Banco o Valor padrão para comum (Default = 1)
 
                     cmd.ExecuteNonQuery();
                 }
@@ -89,7 +89,7 @@ namespace senai.inlock.webApi.Repositories
         {
             using (SqlConnection con = new SqlConnection(stringConexao))
             {
-                string queryDelete = "Delete From Usuario where IdUsuario = @Id";
+                string queryDelete = "Delete From Usuarios where IdUsuario = @Id";
 
                 using (SqlCommand cmd = new SqlCommand(queryDelete, con))
                 {
@@ -108,7 +108,7 @@ namespace senai.inlock.webApi.Repositories
 
             using (SqlConnection con = new SqlConnection(stringConexao))
             {
-                string querySelect = "Select email, Titulo From Usuario As U Inner Join TiposUsuario As T On U.IdTipo = T.IdTipo";
+                string querySelect = "Select email, Titulo From Usuarios As U Inner Join TiposUsuarios As T On U.IdTipoUsuario = T.IdTipoUsuario";
 
                 con.Open();
 
@@ -122,8 +122,8 @@ namespace senai.inlock.webApi.Repositories
                     {
                         UsuarioDomain usuario = new UsuarioDomain()
                         {
-                            email = rdr[0].ToString(),
-                            IdTipo = new TiposUsuarioDomain { Titulo = rdr[1].ToString()}
+                            Email = rdr[0].ToString(),
+                            IdTipoUsuario = new TiposUsuarioDomain { Titulo = rdr[1].ToString()}
                         };
 
                         lista_usuarios.Add(usuario);

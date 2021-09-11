@@ -11,6 +11,9 @@ SELECT * FROM Estudios;
 --Listar todos os jogos;
 SELECT * FROM Jogos;
 
+--Listar todos os tipos de usuários;
+SELECT * FROM TiposUsuarios;
+
 --Listar todos os jogos e seus respectivos estúdios;
 SELECT NomeEstudio, NomeJogo, Descricao,  CONVERT (DATE,DataLancamento,103)[Data de Lancamento], ValorJogo
 FROM Jogos
@@ -60,3 +63,5 @@ Select NomeEstudio As [Nome do Estudio], IdJogo As [Id Jogo], NomeJogo As Nome, 
 From Estudios As E
 Left Join Jogos As J 
 On E.IdEstudio = J.IdEstudio
+
+ select  IdUsuario, email, senha, IdTipoUsuario from Usuarios where email = 'admin@admin.com'  and senha = 'admin'

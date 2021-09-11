@@ -25,7 +25,7 @@ namespace senai.inlock.webApi.Controllers
         }
 
         //Listar Todos
-        [Authorize(Roles = "Administrador,  Cliente")]
+        [Authorize(Roles = "1, 2")]
         [HttpGet]
         public IActionResult Get()
         {
@@ -36,7 +36,7 @@ namespace senai.inlock.webApi.Controllers
 
 
         //Listar por Id 
-        [Authorize(Roles = "Administrador")]
+        [Authorize(Roles = "1")]
         [HttpGet("{Id}")]
         public IActionResult GetById(int Id)
         {
@@ -51,7 +51,7 @@ namespace senai.inlock.webApi.Controllers
         }
 
         //Cadastrar
-        [Authorize(Roles = "Administrador")]
+        [Authorize(Roles = "1")]
         [HttpPost]
         public IActionResult Post(EstudiosDomain NovoEstudio)
         {
@@ -61,7 +61,7 @@ namespace senai.inlock.webApi.Controllers
         }
 
         //Atualizar (passando pela Url)
-        [Authorize(Roles = "Administrador")]
+        [Authorize(Roles = "1")]
         [HttpPut("{Id}")]
         public IActionResult PutUrl(int Id, EstudiosDomain EstudioAtualizado)
         {
@@ -87,8 +87,8 @@ namespace senai.inlock.webApi.Controllers
 
 
         //Deletar
-        [HttpDelete]
-        [Authorize(Roles = "Administrador")]
+        [HttpDelete("{Id}")]
+        [Authorize(Roles = "1")]
         public IActionResult Delete(int Id)
         {
             _EstudioRepository.Deletar(Id);

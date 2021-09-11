@@ -39,6 +39,6 @@ namespace senai.inlock.webApi.Interfaces
         /// </summary>
         /// <param name="UsuarioAtualizado">Novos Dados</param>
         /// <param name="IdUsuario">Id a ser atualizado</param>
-        void AtualizarIdUrl(UsuarioDomain UsuarioAtualizado, int IdUsuario);
+        //void AtualizarIdUrl(UsuarioDomain UsuarioAtualizado, int IdUsuario);
     }
 }

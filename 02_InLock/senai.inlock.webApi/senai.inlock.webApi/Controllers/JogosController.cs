@@ -26,7 +26,7 @@ namespace senai.inlock.webApi.Controllers
         }
 
         //Listar Todos
-        [Authorize(Roles = "Administrador, Cliente")]
+        [Authorize(Roles = "1, 2")]
         [HttpGet]
         public IActionResult Get()
         {
@@ -36,7 +36,7 @@ namespace senai.inlock.webApi.Controllers
         }
 
         //Buscar por Id
-        [Authorize(Roles = "Administrador,  Cliente")]
+        [Authorize(Roles = "1, 2")]
         [HttpGet("{Id}")]
         public IActionResult GetById(int Id)
         {
@@ -52,7 +52,7 @@ namespace senai.inlock.webApi.Controllers
 
         //Cadastrar
         //Ver se a escrita ta certa "Administrador"
-        [Authorize(Roles = "Administrador")]
+        [Authorize(Roles = "1")]
         [HttpPost]
         public IActionResult Post(JogosDomain NovoJogo)
         {
@@ -62,7 +62,7 @@ namespace senai.inlock.webApi.Controllers
         }
 
         //Atualizar (passando pela Url)
-        [Authorize(Roles = "Administrador")]
+        [Authorize(Roles = "1")]
         [HttpPut("{Id}")]
         public IActionResult PutUrl(int Id, JogosDomain JogoAtualizado)
         {
@@ -86,8 +86,8 @@ namespace senai.inlock.webApi.Controllers
             }
         }
 
-        [Authorize(Roles = "Administrador")]
-        [HttpDelete]
+        [Authorize(Roles = "1")]
+        [HttpDelete("{Id}")]
         public IActionResult Delete(int Id)
         {
             //_JogoRepository.Deletar(Id);

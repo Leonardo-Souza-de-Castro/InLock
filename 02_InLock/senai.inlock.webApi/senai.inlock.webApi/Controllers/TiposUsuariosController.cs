@@ -16,7 +16,7 @@ namespace senai.inlock.webApi.Controllers
     [Route("api/[controller]")]
     [ApiController]
 
-    [Authorize(Roles = "Administrador")]
+    [Authorize(Roles = "1")]
 
     public class TiposUsuariosController : ControllerBase
     {
@@ -81,6 +81,7 @@ namespace senai.inlock.webApi.Controllers
                 throw;
             }
         }
+
 
         //Deletar
         [HttpDelete]

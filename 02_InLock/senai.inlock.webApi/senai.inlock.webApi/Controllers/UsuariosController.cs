@@ -27,11 +27,11 @@ namespace senai.inlock.webApi.Controllers
             _UsuarioRepository = new UsuarioRepository();
         }
 
-        [Authorize(Roles = "Administrador, Cliente")]
+
         [HttpPost("Login")]
         public IActionResult Login(UsuarioDomain Login)
         {
-            UsuarioDomain UsuarioBuscado = _UsuarioRepository.BuscarporEmaileSenha(Login.email, Login.senha);
+            UsuarioDomain UsuarioBuscado = _UsuarioRepository.BuscarporEmaileSenha(Login.Email, Login.Senha);
 
             if (UsuarioBuscado == null)
             {
@@ -40,9 +40,9 @@ namespace senai.inlock.webApi.Controllers
 
             var MinhasClaims = new[]
             {
-                new Claim(JwtRegisteredClaimNames.Email, UsuarioBuscado.email),
+                new Claim(JwtRegisteredClaimNames.Email, UsuarioBuscado.Email),
                 new Claim(JwtRegisteredClaimNames.Jti, UsuarioBuscado.IdUsuario.ToString()),
-                new Claim(ClaimTypes.Role, UsuarioBuscado.IdTipo.Titulo),
+                new Claim(ClaimTypes.Role, UsuarioBuscado.IdTipoUsuario.IdTipoUsuario.ToString())
             };
 
             var key = new SymmetricSecurityKey(System.Text.Encoding.UTF8.GetBytes("jogos-inlock-chave-autenticar"));
@@ -62,7 +62,7 @@ namespace senai.inlock.webApi.Controllers
             });
         }
 
-        [Authorize(Roles = "Administrador")]
+        [Authorize(Roles = "1")]
         [HttpGet]
         public IActionResult Get()
         {
@@ -79,8 +79,8 @@ namespace senai.inlock.webApi.Controllers
             return Ok();
         }
 
-        [Authorize(Roles = "Administrador")]
-        [HttpDelete]
+        [Authorize(Roles = "1")]
+        [HttpDelete("{Id}")]
         public IActionResult Delete(int Id)
         {
             _UsuarioRepository.Deletar(Id);
@@ -88,28 +88,28 @@ namespace senai.inlock.webApi.Controllers
             return Ok();
         }
 
-        [Authorize(Roles = "Administrador, Cliente")]
-        [HttpPut("{Id}")]
-        public IActionResult PutUrl(int Id, string email, string senha, UsuarioDomain UsuarioAtualizado)
-        {
-            UsuarioDomain UsuarioBuscado = _UsuarioRepository.BuscarporEmaileSenha(email, senha);
+        //[Authorize(Roles = "1, 2")]
+        //[HttpPut("{Id}")]
+        //public IActionResult PutUrl(string Email, string Senha, UsuarioDomain UsuarioAtualizado)
+        //{
+        //    UsuarioDomain UsuarioBuscado = _UsuarioRepository.BuscarporEmaileSenha(Email, Senha);
 
-            if (UsuarioBuscado == null)
-            {
-                return NotFound("Nenhum estúdio encontrado!");
-            }
+        //    if (UsuarioBuscado == null)
+        //    {
+        //        return NotFound("Nenhum estúdio encontrado!");
+        //    }
 
-            try
-            {
-                _UsuarioRepository.AtualizarIdUrl(UsuarioAtualizado, Id);
-                return NoContent();
-            }
-            catch (Exception Erro)
-            {
-                return BadRequest(Erro);
-                throw;
-            }
+        //    try
+        //    {
+        //        _UsuarioRepository.AtualizarIdUrl(UsuarioAtualizado, Id);
+        //        return NoContent();
+        //    }
+        //    catch (Exception Erro)
+        //    {
+        //        return BadRequest(Erro);
+        //        throw;
+        //    }
 
-        }
+        //}
     }
 }

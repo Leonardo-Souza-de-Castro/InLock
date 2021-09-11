@@ -20,7 +20,7 @@ namespace senai.inlock.webApi.Domains
         public DateTime DataLancamento { get; set; }
 
         [Required(ErrorMessage = "O valor do jogo é obrigatório.")]
-        public int ValorJogo { get; set; }
+        public decimal ValorJogo { get; set; }
         public EstudiosDomain Estudio { get; set; }
     }
 }

@@ -11,10 +11,10 @@ namespace senai.inlock.webApi.Domains
         public int IdUsuario { get; set; }
 
         [Required(ErrorMessage = "Informe o email.")]
-        public string email { get; set; }
+        public string Email { get; set; }
 
         [Required(ErrorMessage = "Informe a senha.")]
-        public string senha { get; set; }
-        public TiposUsuarioDomain IdTipo { get; set; }
+        public string Senha { get; set; }
+        public TiposUsuarioDomain IdTipoUsuario { get; set; }
     }
 }

@@ -38,4 +38,6 @@ CREATE TABLE Usuarios(
   Senha VARCHAR(20) NOT NULL
 );
 
-
+ALTER TABLE Usuarios 
+ADD CONSTRAINT INT
+DEFAULT 2 FOR IdTipoUsuario;

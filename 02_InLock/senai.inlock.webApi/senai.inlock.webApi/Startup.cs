@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using System;
 using System.Collections.Generic;
@@ -18,6 +19,31 @@ namespace senai.inlock.webApi
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+
+            services
+                .AddAuthentication(options => {
+                    options.DefaultAuthenticateScheme = "JwtBearer";
+                    options.DefaultChallengeScheme = "JwtBearer";
+                })
+
+                .AddJwtBearer("JwtBearer", options => {
+                    options.TokenValidationParameters = new TokenValidationParameters
+                    {
+                        ValidateIssuer = true,
+
+                        ValidateAudience = true,
+
+                        ValidateLifetime = true,
+
+                        IssuerSigningKey = new SymmetricSecurityKey(System.Text.Encoding.UTF8.GetBytes("jogos-inlock-chave-autenticar")),
+
+                        ClockSkew = TimeSpan.FromHours(5),
+
+                        ValidIssuer = "inlock.webApi",
+
+                        ValidAudience = "inlock.webApi"
+                    };
+                });
 
             services.AddSwaggerGen(c => {
                 c.SwaggerDoc("v1", new OpenApiInfo
@@ -36,6 +62,8 @@ namespace senai.inlock.webApi
                 app.UseDeveloperExceptionPage();
             }
 
+            app.UseRouting();
+
             // Enable middleware to serve generated Swagger as a JSON endpoint.
             app.UseSwagger();
 
@@ -45,12 +73,15 @@ namespace senai.inlock.webApi
                 c.RoutePrefix = string.Empty;
             });
 
-            app.UseRouting();
+            app.UseAuthentication();
+
+            app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
             });
+
         }
     }
 }
