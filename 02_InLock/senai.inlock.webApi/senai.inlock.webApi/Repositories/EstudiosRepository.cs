@@ -11,9 +11,9 @@ namespace senai.inlock.webApi.Repositories
     public class EstudiosRepository : IEstudiosRepository
     {
 
-        private string stringConexao = "Data Source=DESKTOP-9F56DG6\\SQLEXPRESS; initial catalog=Inlock_Games_Manha; integrated security=true;";
+       // private string stringConexao = "Data Source=DESKTOP-9F56DG6\\SQLEXPRESS; initial catalog=Inlock_Games_Manha; integrated security=true;";
 
-        //private string stringConexao = "Data Source=DESKTOP-R3SNJAL\\SQLEXPRESS; initial catalog=Inlock_Games_Manha; user id=sa; pwd=senai@132";
+        private string stringConexao = "Data Source=DESKTOP-R3SNJAL\\SQLEXPRESS; initial catalog=Inlock_Games_Manha; user id=sa; pwd=senai@132";
 
         public void AtualizarIdUrl(EstudiosDomain estudioatualizado, int IdEstudio)
         {
@@ -107,7 +107,15 @@ namespace senai.inlock.webApi.Repositories
 
             using (SqlConnection con = new SqlConnection(stringConexao))
             {
-                string querySelect = "Select NomeEstudio As [Nome do Estudio], IdJogo As [Id Jogo], NomeJogo As Nome, Descricao As [Descrição], DataLancamento As [Data de Lançamento], ValorJogo As Valor From Estudios As E Left Join Jogos As J On E.IdEstudio = J.IdEstudio";
+                string querySelect = @"Select NomeEstudio As [Nome do Estudio], 
+                    Coalesce (IdJogo, 0) As [Id Jogo], 
+                    IsNull (NomeJogo, 'Nada lançado até o momento') As [Nome do Jogo], 
+                    IsNull(Descricao, 'Nada lançado até o momento') As [Descrição], 
+                    IsNull (DataLancamento, '11-09-2021') As [Data de Lançamento], 
+                    IsNull(ValorJogo, 0.00) As Valor
+                    From Estudios As E 
+                    Left Join Jogos As J
+                    On E.IdEstudio = J.IdEstudio";
 
                 con.Open();
 
